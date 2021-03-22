@@ -2,17 +2,17 @@
 
 API criada durante o curso de React Avançado!
 
-## Sobre o projeto
+## :computer: Sobre o projeto
 
 Back-end criado com o [Strapi](https://strapi.io/documentation/developer-docs/latest/getting-started/introduction.html): um headless CMS open-source feito 100% em JavaScript, totalmente customizável.
 
 O painel do Strapi permitirá que as pessoas não tecnicas consigam inserir conteúdos diretamente no site, de uma forma simples e intuitiva :)
 
-## Requisitos
+## :mag_right: Requisitos
 
 O projeto utiliza [PostgreSQL](https://www.postgresql.org/), a configuração do banco de dados está disponível em [config/database.js](config/database.js).
 
-## Como executar este projeto
+## :wrench: Como executar este projeto
 
 1. Clone este repositório: `git clone https://github.com/malufell/react-avancado-api.git`
 2. Acesse a pasta do projeto no seu terminal/cmd: `cd react-avancado-api`
@@ -25,7 +25,10 @@ O projeto utiliza [PostgreSQL](https://www.postgresql.org/), a configuração do
 6. Popule dados na API:
    - Este projeto utiliza a rota `/games/populate` para popular os dados com origem [neste site](https://www.gog.com/games)
    - Inicialmente é necessário tornar público o acesso a essa rota: no Strapi, em "Configurações" > "Níveis e Permissões" > "Public" - é necessário flegar a rota `game:populate` e em "Upload" flegar a rota "upload" também > Salvar
-   - Com o Strapi rodando (`npm run develop`), rodar o comando no console:  `curl -X POST http://localhost:1337/games/populate`
+   - Com o Strapi rodando (`npm run develop`), rodar o comando no console:  
+    ```console
+    curl -X POST http://localhost:1337/games/populate
+    ```
    - Também é possível enviar parâmetros:
     ```console
     $ curl -X POST http://localhost:1337/games/populate?page=2
@@ -34,7 +37,9 @@ O projeto utiliza [PostgreSQL](https://www.postgresql.org/), a configuração do
     $ curl -X POST http://localhost:1337/games/populate?availability=coming&sort=popularity
     ```
 
-Resultado - exemplo de um jogo cadastrado, incluindo imagens:
+## :heart: Resultado
+
+Exemplo de um jogo cadastrado, incluindo imagens:
 
 ![image](https://user-images.githubusercontent.com/62160705/112063269-e66c7480-8b3f-11eb-859d-604ddc133e83.png)
 
