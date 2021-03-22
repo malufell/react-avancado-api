@@ -6,13 +6,16 @@ API criada durante o curso de React Avançado, será o ecommerce de uma loja de 
 
 Back-end criado com o [Strapi](https://strapi.io/documentation/developer-docs/latest/getting-started/introduction.html): um headless CMS open-source feito 100% em JavaScript, totalmente customizável. O painel do Strapi permitirá que as pessoas não técnicas consigam inserir conteúdos diretamente no site, de uma forma simples e intuitiva :)
 
+![image](https://user-images.githubusercontent.com/62160705/112065770-06059c00-8b44-11eb-8819-051e994a27db.png)
+
+<br>
+
 - A área administrativa do Strapi foi customizada para mostrar a identidade visual da loja de jogos;
 - As tabelas e relacionamentos entre elas foram criadas diretamente no Strapi;
 - Os dados da aplicação são populados de duas formas:
   - através de uma requisição com axios, que busca os dados da API [dessa loja de games](https://www.gog.com/games);
   - scrapper dos dados da página do game, com uso do [JSDOM](https://github.com/jsdom/jsdom) (porque algumas páginas não possuem uma API, as informações são entregues já prontas para renderização no client);
-
-![image](https://user-images.githubusercontent.com/62160705/112065770-06059c00-8b44-11eb-8819-051e994a27db.png)
+- É possível buscar dados através de queries [graphQL](https://graphql.org/)
 
 
 > Um CMS (Content Management System - Sistema de Gerenciamento de conteúdo) é um software responsável por gerenciar o conteúdo, ou seja, permitir criação, edição e organização de um determinado conteúdo. Headless entrega somente o dado puro pela API e esse dado é tratado como quiser (posso ter um site em react, um outro sistema em vue, um app feito em react native e todos receberão a mesma informação).
