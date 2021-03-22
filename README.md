@@ -9,8 +9,8 @@ Back-end criado com o [Strapi](https://strapi.io/documentation/developer-docs/la
 - A área administrativa do Strapi foi customizada para mostrar a identidade visual da loja de jogos;
 - As tabelas e relacionamentos entre elas foram criadas diretamente no Strapi;
 - Os dados da aplicação são populados de duas formas:
-  - através de uma requisição com axios, que busca os dados da API da loja de games;
-  - scrapper dos dados da página do game, com uso do JSDOM (porque essas páginas não possuem uma API, as informações são entregues já prontas para renderização no client);
+  - através de uma requisição com axios, que busca os dados da API [dessa loja de games](https://www.gog.com/games);
+  - scrapper dos dados da página do game, com uso do [JSDOM](https://github.com/jsdom/jsdom) (porque algumas páginas não possuem uma API, as informações são entregues já prontas para renderização no client);
 
 ![image](https://user-images.githubusercontent.com/62160705/112065770-06059c00-8b44-11eb-8819-051e994a27db.png)
 
@@ -32,7 +32,7 @@ O projeto utiliza [PostgreSQL](https://www.postgresql.org/), a configuração do
    - No primeiro acesso ao `/admin` será necessário criar um usuário!
    - `http://localhost:1337/graphql` - GraphQL Playground para testar as queries
 6. Popule dados na API:
-   - Este projeto utiliza a rota `/games/populate` para popular os dados com origem [neste site](https://www.gog.com/games)
+   - Este projeto utiliza a rota `/games/populate` para popular os dados;
    - Inicialmente é necessário tornar público o acesso a essa rota: no Strapi, em "Configurações" > "Níveis e Permissões" > "Public" - é necessário flegar a rota `game:populate` e em "Upload" flegar a rota "upload" também > Salvar
    - Com o Strapi rodando (`npm run develop`), rodar o comando no console:  
     ```console
